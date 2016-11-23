@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<templates>
+	<template key="23like">
+		<firstline>true</firstline>
+		<name>c</name>
+		<telphone>e</telphone>
+		<address>f</address>
+		<message>j</message>
+	</template>
+	<template key="hao315like">
+		<firstline>true</firstline>
+		<name>b</name>
+		<telphone>e</telphone>
+		<address>d</address>
+		<message>c</message>
+	</template>
+	<template key="78like">
+		<firstline>false</firstline>
+		<name>b</name>
+		<telphone>e</telphone>
+		<address>h</address>
+		<message>k</message>
+	</template>
+	<template key="959like">
+		<firstline>true</firstline>
+		<name>a</name>
+		<telphone>c</telphone>
+		<address>f</address>
+		<message>g</message>
+	</template>
+	<template key="3158like">
+		<firstline>true</firstline>
+		<name>d</name>
+		<telphone>f</telphone>
+		<address>g</address>
+		<message>i</message>
+	</template>
+	<template key="2958like">
+		<firstline>true</firstline>
+		<name>c</name>
+		<telphone>e</telphone>
+		<address>f</address>
+		<message>k</message>
+	</template>
+	<template key="23relike">
+		<firstline>true</firstline>
+		<name></name>
+		<telphone>e</telphone>
+		<address></address>
+		<message></message>
+	</template>
+	<template key="959relike">
+		<firstline>true</firstline>
+		<name></name>
+		<telphone>a</telphone>
+		<address></address>
+		<message></message>
+	</template>
+	<template key="3158relike">
+		<firstline>true</firstline>
+		<name></name>
+		<telphone>b</telphone>
+		<address></address>
+		<message></message>
+	</template>
+	<template key="2958relike">
+		<firstline>true</firstline>
+		<name></name>
+		<telphone>e</telphone>
+		<address></address>
+		<message></message>
+	</template>
+</templates>

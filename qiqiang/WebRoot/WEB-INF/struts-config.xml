@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+		<form-beans>
+			<form-bean name="adLoginForm" type="com.yashun.form.AdLoginForm"/>
+			<form-bean name="messageForm" type="com.yashun.form.MessageForm"/>
+			<form-bean name="adminForm" type="com.yashun.form.AdminForm"/>
+			<form-bean name="userForm" type="com.yashun.form.UserForm"/>
+			<form-bean name="fileForm" type="com.yashun.form.FileForm"/>
+		</form-beans>
+		<action-mappings>
+				<action path="/adlogin"
+							   type="com.yashun.action.AdLoginAction"
+							   scope = "request"
+							   name = "adLoginForm"
+							   >
+							   <forward name = "success" path="/ad_index.jsp" redirect = "true"/>
+							   <forward name = "error" path= "/login1.jsp"/>
+					 </action>
+					 <action path="/logout"
+					 				type = "com.yashun.action.LogoutAction"
+					 				scope="request"	
+					 				>
+					 				<forward name="ok"  path = "/ad_index.jsp" redirect = "true"/>
+					 	</action>
+					 <action path="/showmessage"
+					 				type = "com.yashun.action.ShowMessageList"
+					 				scope="request"	
+					 				>
+					 				<forward name="ok"  path = "/listly.jsp"/>
+					 </action>
+					 <action path="/fenpeiren"
+					 				type = "com.yashun.action.FenPeiRenAction"
+					 				scope="request"	
+					 				>
+					 				<forward name="ok"  path = "/fpren.jsp"/>
+					 </action>
+					 <action path="/modifyren"
+					 				type = "com.yashun.action.ModifyRenAction"
+					 				scope="request"	
+					 				>
+					 				<forward name="ok"  path = "/modifyren.jsp"/>
+					 </action>
+					 <action path="/move"
+					 				type = "com.yashun.action.MoveAction"
+					 				scope="request"	
+					 				>
+					 				<forward name="ok"  path = "/modifyren.jsp"/>
+					 </action>
+					 <action path="/delete"
+					 				type = "com.yashun.action.DeleteMessageAction"
+					 				scope="request"	
+					 				>
+					 				<forward name="ok"  path = "/modifyren.jsp"/>
+					 </action>
+					 <action path="/showusers"
+					 				type = "com.yashun.action.ShowUsersAction"
+					 				scope="request"	
+					 				>
+					 				<forward name="ok"  path = "/userlist.jsp"/>
+					 </action>
+					 <action path="/openandclose"
+					 				type = "com.yashun.action.OpenAndCloseAction"
+					 				scope="request"	
+					 				parameter="method"
+					 				>
+					 				<forward name="ok"  path = "/userlist.jsp"/>
+					 </action>
+					 <action path="/modifyuser"
+					 				type = "com.yashun.action.ModifyUser"
+					 				scope="request"	
+					 				>
+					 				<forward name="ok"  path = "/modifyuser.jsp"/>
+					 </action>
+					 <action path="/domodefiyuser"
+					 				type = "com.yashun.action.DoModifyAction"
+					 				scope="request"	
+					 				parameter="method"
+					 				>
+					 				<forward name="ok"  path = "/userlist.jsp"/>
+					 </action>
+					 <action path="/adduser"
+					 				type = "com.yashun.action.AddUserAction"
+					 				scope="request"	
+					 				>
+					 				<forward name="ok"  path = "/modifyuser.jsp"/>
+					 </action>
+					  <action path="/lookbyuser"
+					 				type = "com.yashun.action.LookByUserAction"
+					 				scope="request"	
+					 				>
+					 				<forward name="ok"  path = "/lookren.jsp"/>
+					 </action>
+					 <action path="/serach"
+					 				type = "com.yashun.action.SearchAction"
+					 				scope="request"	
+					 				parameter="method"
+					 				>
+					 				<forward name="result"  path = "/adminresult.jsp"/>
+					 </action>
+					 <action path="/serach2"
+					 				type = "com.yashun.action.Search2Action"
+					 				scope="request"	
+					 				parameter="method"
+					 				>
+					 				<forward name="result"  path = "/userresult.jsp"/>
+					 </action>
+					 <action path="/serach3"
+					 				type = "com.yashun.action.Search3Action"
+					 				scope="request"	
+					 				parameter="method"
+					 				>
+					 				<forward name="result"  path = "/userresult.jsp"/>
+					 </action>
+					 <action path="/admin_add"
+					 				type = "com.yashun.action.AddMessageByAdmin"
+					 				scope="request"	
+					 				parameter="method"
+					 				name="messageForm"
+					 				>
+					 				<forward name="addview"  path = "/addly.jsp"/>
+					 				<forward name="ok"  path = "/showmessage.do?flag=all"/>
+					 				<forward name="userok"  path = "/userlyaction.do?method=showMessages"/>
+					 				<forward name="erro"  path = "/addly.jsp"/>
+					 				<forward name="import"  path = "/import.jsp"/>
+					 </action>
+					 <action path="/modifyadmin"
+					 				type = "com.yashun.action.AdminModify"
+					 				scope="request"	
+					 				parameter="method"
+					 				name="adminForm"
+					 				>
+					 				<forward name="view"  path = "/admin.jsp"/>
+					 				<forward name="ok"  path = "/modifyadmin.do?method=show"/>
+					 </action>
+					 <action path="/userloginout"
+							   type="com.yashun.action.UserLoginAndOutAction"
+							   scope = "request"
+							   name = "userForm"
+							   parameter="method"
+							   >
+							   <forward name = "success" path="/index2.jsp" redirect = "true"/>
+							   <forward name = "error" path= "/login2.jsp"/>
+							   <forward name = "out" path= "/index2.jsp"/>
+							   <forward name = "mdview" path= "/modify_zs_pass.jsp"/>
+							   <forward name = "mdok" path= "/userloginout.do?method=modifyView"/>
+					 </action>
+					 <action path="/userlyaction"
+							   type="com.yashun.action.UserLyAction"
+							   scope = "request"
+							   parameter="method"
+							   >
+							   <forward name = "success" path="/zslookly.jsp"/>
+							   <forward name = "error" path= "/login2.jsp"/>
+							   <forward name = "out" path= "/index2.jsp"/>
+							   <forward name = "view" path= "/modify_ly.jsp"/>
+							   <forward name = "modifyok" path= "/userlyaction.do?method=showMessages"/>
+							   <forward name = "modifyerr" path= "/modify_ly.jsp"/>
+							   <forward name = "taskmodify" path= "/task.do?1=1"/>
+							   <forward name = "showintent" path= "/intentgroup.jsp"/>
+					 </action>
+					 <action path="/modifyren2"
+					 				type = "com.yashun.action.ModifyRen2Action"
+					 				scope="request"	
+					 				>
+					 				<forward name="ok"  path = "/modifyren1.jsp"/>
+					 </action>
+					 <action path="/task"
+					 				type = "com.yashun.action.TaskAction"
+					 				scope="request"	
+					 				>
+					 				<forward name="ok"  path = "/zslooklyhf.jsp"/>
+					 				<forward name="timeout"  path = "/index2.jsp"/>
+					 </action>
+					 <action path="/auto"
+					 				type = "com.yashun.action.AutolyAction"
+					 				scope="request"	
+					 				parameter="method"
+					 				>
+					 				<forward name="view"  path = "/autoly.jsp"/>
+					 				<forward name="ok"  path = "/auto.do?method=showView"/>
+					 				<forward name="err"  path = "/autoly.jsp"/>
+					 </action>
+					 <action path="/import"
+					 				type = "com.yashun.action.ImportAction"
+					 				scope="request"	
+					 				name="fileForm"
+					 				>
+					 				<forward name="ok"  path = "/showmessage.do?flag=all"/>
+					 </action>
+					 <action path="/complete"
+					 				type = "com.yashun.action.LookFinish"
+					 				scope="request"	
+					 				>
+					 				<forward name="ok"  path = "/complete.jsp"/>
+					 </action>
+					 <action path="/complete"
+					 				type = "com.yashun.action.LookFinish"
+					 				scope="request"	
+					 				>
+					 				<forward name="ok"  path = "/complete.jsp"/>
+					 </action>
+					 <action path="/completebyuser"
+					 				type = "com.yashun.action.CompleteByUser"
+					 				scope="request"	
+					 				>
+					 				<forward name="ok"  path = "/completebyuser.jsp"/>
+					 </action>
+					 <action path="/usercomplete"
+					 				type = "com.yashun.action.UserComplete"
+					 				scope="request"	
+					 				parameter="method"
+					 				>
+					 				<forward name="ok"  path = "/usercomplete.jsp"/>
+					 				<forward name="succ" path="/userlyaction.do?method=showMessages"/>
+					 </action>
+					 
+					 <action path="/marketloginout"
+							   type="com.yashun.action.MarketLogin"
+							   scope = "request"
+							   name = "userForm"
+							   parameter="method"
+							   >
+							   <forward name = "success" path="/index3.jsp" redirect="true"/>
+							   <forward name = "error" path= "/login3.jsp"/>
+					 </action>
+					 
+					 <action path="/marketaction"
+							   type="com.yashun.action.MarketAction"
+							   scope = "request"
+							   parameter="method"
+							   name="messageForm"
+							   >
+							   <forward name = "success" path="/marketly.jsp" />
+							   <forward name="addok"  path = "/marketaction.do?method=showMarLy"/>
+							   <forward name = "view" path= "/modify_market_ly.jsp"/>
+							   <forward name = "modifyok" path= "/marketaction.do?method=showMarLy"/>
+					 </action>
+					 
+					 <action path="/addtags"
+					 				type = "com.yashun.action.AddTags"
+					 				scope="request"	
+					 				parameter="method"
+					 				>
+					 				<forward name="addview"  path = "/addtag.jsp"/>
+					 				<forward name = "toaddtag"  path = "/addtags.do?method=toAddTagView"/>
+					 				<forward name="toimport" path = "/admin_add.do?method=showImpotView"/>
+					 </action>
+		</action-mappings>
+</struts-config>
+
