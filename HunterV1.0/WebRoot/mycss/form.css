@@ -1,0 +1,181 @@
+.exlist{
+	font-family:"KaiTi_GB2312";
+}
+
+#title{
+	width:200px;
+	margin:20px auto;
+}
+
+#title legend{
+	font-size:26px;
+}
+
+div.exlist_title{
+	
+	width:680px;
+	height:20px;
+}
+
+
+fieldset{
+	width:90%;
+	border:1px dashed #666;
+	margin:40px auto;
+}
+ 
+legend{
+	
+	height:120px;
+	height:30px;
+	color:#630;
+	font-weight:bolder;
+	font-size:20px;
+	line-height:30px;
+	margin:-20px 10px 10px;
+	padding:0 10px;
+}
+  
+ 
+div.row{
+	margin:10px;
+	padding:5px;
+}
+ 
+div.row label{
+	height:20px;
+	font-size:16px;
+	line-height:20px;
+	margin:0 10px;
+}
+ 
+input.txt{
+	/*background-color:#e2e7fa;*/
+	background-color:#ECF3FF;
+	color:#333;
+	width:200px;
+	height:20px;
+	margin:0 10px;
+	font-size:16px;
+	line-height:20px;
+	border:none;
+	border-bottom:1px solid #565656;
+
+}
+ 
+ textarea.txt{
+	background-color:#e2e7fa;
+	color:#333;
+	font-size:16px;
+	line-height:20px;
+	border:none;
+	border-bottom:1px solid #565656;
+
+}
+
+input.txt:focus{
+	color:#333;
+	background-color: #b2c0e3;
+	border-bottom:1px solid #F00;
+}
+ 
+ textarea.txt:focus{
+	color:#333;
+	background-color: #b2c0e3;
+	border-bottom:1px solid #F00;
+}
+
+select{
+	width:100px;
+	height:20px;
+}
+select option
+{
+	text-align:left;
+}
+
+option{
+	text-align:center;
+}
+
+input.btn{
+	width:50px;
+	height:20px;
+	color:#000008B;
+	background-color: transparent;
+	border:0;
+	padding:0;
+}
+/*合同*/
+.input-file{display: inline-block;width: 140px;height: 20px;line-height: 20px;text-align: center; overflow: hidden;position: relative;background-color: #e2e7fa;color:#333;text-shadow:0 -1px 0 rgba(0,0,0,0.25);border-radius: 1px;transition:background .3s;-webkit-transition:background .3s;	background-color:#e2e7fa;
+	width:200px;
+	height:20px;
+	margin:0 10px;
+	font-size:16px;
+	border:none;
+	border-bottom:1px solid #565656;}
+.input-file:hover{background-color: #b2c0e3}
+.input-file input{opacity: 0;filter:alpha(opacity=0);font-size: 100px;position: absolute;top: 0;right: 0} 
+
+/*按钮*/
+input.button
+{
+	background-color:#e2e7fa;
+	color:#333;
+	width:80px;
+	margin:0 10px;
+
+}
+input.button:focus{
+	color:#333;
+	background-color: #b2c0e3;
+}
+
+/*select*/
+		.btn-select {
+			position: relative;
+			display: inline-block;
+			width: 200px;
+			height: 25px;
+			background-color:#e2e7fa;
+			font: 16px "Microsoft YaHei";
+			color: #333;
+			border-bottom:1px solid #565656;
+			
+		}
+
+		.btn-select .cur-select {
+			position: absolute;
+			display: block;
+			width: 200px;
+			height: 25px;
+			line-height: 25px;
+			background: #e2e7fa no-repeat 175px center url(../pic/ico-arrow.png);
+			text-indent: 10px;
+			
+		}
+
+		.btn-select:hover .cur-select {
+			background-color: #b2c0e3;
+		}
+
+		.btn-select select {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 200px;
+			height: 25px;
+			opacity: 0;
+			filter: alpha(opacity: 0;);
+			font: 16px "Microsoft YaHei";
+			color: #333;
+		}
+
+		.btn-select select option {
+			text-indent: 10px;
+		}
+
+		.btn-select select option:hover {
+			background-color:#b2c0e3;
+			color: #333;
+		}

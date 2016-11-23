@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+		<form-beans>
+			<form-bean name="userForm" type="com.hunter.huanqiu.form.UserForm"/>
+			<form-bean name="companyForm" type="com.hunter.huanqiu.form.CompanyForm"/>
+			<form-bean name="contractForm" type="com.hunter.huanqiu.form.ContractForm"/>
+			<form-bean name="billForm" type="com.hunter.huanqiu.form.BillForm"/>
+			<form-bean name="recordForm" type="com.hunter.huanqiu.form.RecordForm"/>
+			<form-bean name="employeeForm" type="com.hunter.huanqiu.form.EmployeeForm"/>
+			<form-bean name="memoForm" type="com.hunter.huanqiu.form.MemoForm"/>
+		</form-beans>
+		<action-mappings>
+		
+			<action path="/login"
+						  type="com.hunter.huanqiu.action.LoginAction"
+						  scope="request"
+						  name="userForm"
+							>
+				<forward name="success" path="/" redirect="true"/>	
+				<forward name="error" path="/login.jsp"/>
+			</action>
+		    <action path="/companyAction"
+		    			  type="com.hunter.huanqiu.action.CompanyAction"	
+		    			  scope="request"
+		    			  parameter="method"
+		    			  name="companyForm"
+		    >
+		    <forward name="success" path="/" redirect="true"/>
+		    <forward name="error" path="/login.jsp"/>
+		    
+		    </action>
+		    <action path="/logout" 
+		    			  type="com.hunter.huanqiu.action.LogoutAction"
+		    			  scope="request"
+		    >
+		    <forward name="out" path="/"/>
+		    </action>
+		    <action path="/manager"
+		  				  type="com.hunter.huanqiu.action.ManagerAction"  
+		  				  scope="request"
+		  				  parameter="method"
+		  				  name="userForm"
+		   	>
+		    <forward name="success" path="/login.jsp" redirect="true"/>
+		    </action>
+		     <action path="/followAction"
+		    			  type="com.hunter.huanqiu.action.FollowCompanyAction"	
+		    			  scope="request"
+		    			  parameter="method"
+		    			  name="contractForm"
+		    >
+		    <forward name="success" path="/" redirect="true"/>
+		    <forward name="error" path="/login.jsp"/>
+		    </action>
+		    <action path="/billupAction"
+		   				  type="com.hunter.huanqiu.action.BillUploadAction" 
+		   				  scope="request"
+		   				  name="billForm"
+		    >
+		    <forward name="success" path="/" redirect="true"/>
+		    <forward name="error" path="/login.jsp"/>
+		    </action>
+		    
+		    <action path="/recordAction"
+		    			  type="com.hunter.huanqiu.action.RecordAction"
+		    			  scope="request"
+		    			  name="recordForm"
+		    >
+		    <forward name="success" path="/" redirect="true"/>
+		    <forward name="error" path="/login.jsp"/>
+		    </action>
+		   
+		    <!--  6.24 员工添加跟进记录     -->
+		    <action path="/employee_recordAction"
+		    			  type="com.hunter.huanqiu.action.Employee_RecordAction"
+		    			  scope="request"
+		    			  name="recordForm"
+		    >
+		    <forward name="success" path="/" redirect="true"/>
+		    <forward name="error" path="/login.jsp"/>
+		    </action>
+		    <action path="/employeeAction"
+		    			  type="com.hunter.huanqiu.action.EmployeeAction"	
+		    			  scope="request"
+		    			  parameter="method"
+		    			  name="employeeForm"
+		    >
+		    <forward name="success" path="/" redirect="true"/>
+		    </action>
+		    <!-- 备忘 -->
+		    <action path="/memoAction" 
+		    			   type="com.hunter.huanqiu.action.MemoAction"
+		    			   scope="request"
+		    			   parameter="method"
+		    			   name="memoForm"
+		    >
+		    </action>
+		    <action path="/wordToHtmlAction" 
+		    			   type="com.hunter.huanqiu.action.WordToHtmlAction"
+		    			   scope="request"
+		    			   parameter="method"
+		    >
+		    </action>
+		</action-mappings>
+</struts-config>
+

@@ -1,0 +1,16 @@
+.user_tab{
+	width: 80%;
+	font-family: "SimSun";
+	font-size: 12px;
+	margin: 0px auto;
+}
+.user_tab tr{
+	line-height: 50px;
+}
+.user_tab .left{
+	text-align: right;
+}
+.user_tab .middle{
+	text-align: left;
+	width: 30%;
+}

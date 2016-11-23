@@ -1,0 +1,26 @@
+.title ul{
+	position: absolute;
+	right: 30px;
+	font-size: 0;
+}
+.title ul li{
+	content: " ";
+	display: block;
+	width: 8px;
+	height: 8px;
+	background-color: #D1D1D1;
+	float:left;
+	margin-left: 10px;
+}
+.title ul li:HOVER{
+	cursor: pointer;
+}
+.title ul li.onclick{
+	background-color: #F78118;
+}
+#wrap .scroller{
+	width: 9999px;
+	position: relative;
+	left: 0px;
+	top: 0px;
+}

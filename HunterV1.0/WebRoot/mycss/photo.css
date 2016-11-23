@@ -1,0 +1,25 @@
+
+.photos{
+	width:80%;
+	margin: 0px auto;
+	
+}
+#photos{
+	width: 90%;
+	margin: 0px auto;
+	overflow: hidden;
+}
+.photo_item{
+	width: 310px;
+	height: 180px;
+	overflow: hidden;
+	border: 2px solid silver;  
+	margin:8px;
+	float: left;
+}
+.photo_item img{
+	border: none;
+}
+.photo_item:HOVER{
+	border: 2px solid orange;  
+}

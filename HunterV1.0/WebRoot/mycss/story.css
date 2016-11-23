@@ -1,0 +1,54 @@
+
+#sub_content{
+	text-align:left;
+	border-bottom: 1px dashed #E7E0DA;
+	padding-bottom: 30px;
+	overflow: hidden;
+}
+.sub_content .img{
+	height: 178px;
+	margin-left: 30px;
+	float: left;
+	border: 2px solid gray;
+}
+.sub_content .img:HOVER{
+	border: 2px solid orange;
+}
+.sub_content .img img{
+	border: none;
+}
+.sub_content .introduct{
+	height: 178px;
+	width:600px;
+	float:left;
+	margin-left: 25px;
+}
+.sub_content .title{
+	
+}
+.sub_content .title a {
+	text-decoration: none;
+	font-family: "¡• È";
+	font-weight: bold;
+	font-size: 18px;
+	color: black;
+}
+.sub_content .title a:HOVER {
+	text-decoration: underline;
+}
+.sub_content .title a:VISITED {
+	color: black;
+}
+.sub_content .content{
+	font-size: 13px;
+	font-family: "simsun";
+	color: #979797;
+	margin-top: 20px;
+	height: 120px;
+}
+.sub_content .story_info
+{
+	font-size: 12px;
+	font-family: "simsun";
+	color: #979797;
+}

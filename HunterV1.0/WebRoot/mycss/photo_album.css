@@ -1,0 +1,116 @@
+.upload_photo{
+	width: 80px;
+	height: 30px;
+	background-color: #E65C8A;
+	border: 1px solid #CC4371;
+	color: #FFF;
+}
+.photo_album{
+	text-align: left;
+}
+.photo_album a{
+	text-decoration: none;
+	font-size: 18px;
+	margin-left: 30px;
+}
+.new_album{
+	width: 80px;
+	height: 30px;
+	background-color: #DDDDDD;
+	border: 1px solid gray;
+	color: #000;
+}
+.photo_album_head{
+	padding-bottom: 15px;
+}
+.albums{
+	width: 90%;
+	margin: 0px auto;
+	overflow: hidden;
+}
+.albums .special_albums{
+	background-color: #FFE0E8;
+	width: 223px;
+	height: 250px;
+	position: relative;
+	overflow: hidden;
+}
+
+.albums  li{
+ list-style: none;
+ float: left;
+ margin:10px; 
+}
+.special_albums{
+	border: 2px solid silver;
+	position: relative;
+}
+.special_albums .img{
+	width: 223px;
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+}
+.special_albums .img img:HOVER{
+	cursor: pointer;
+}
+.special_albums .title{
+	position: absolute;
+	bottom: 10px;
+	left:0px;
+	text-align: left;
+}
+.special_albums .title a{
+	text-decoration: none;
+	color: silver;
+}
+.special_albums .title a:HOVER {
+	text-decoration: underline;
+}
+.special_albums .img .menu_down{
+	width:23px;
+	height:22px;
+	background: url("../images/down.jpg");
+	position: absolute; 
+	top:8px;
+	right: 8px;
+}
+.special_albums .img .menu_down:HOVER {
+	cursor: pointer;
+}
+.special_albums .img .menu_list{
+	width: 120px;
+	position: absolute;
+	top: 30px;
+	right: 8px;
+	background: white;
+}
+.special_albums .img .menu_item{
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+}
+.special_albums .img .menu_item:HOVER {
+	cursor: pointer;
+	background-color: blue;
+}
+.create_tab{
+	text-align: center;
+	width: 100%;
+	height: 280px;
+	margin-top: 20px;
+}
+.tab_left{
+	text-align: right;
+	width: 25%;
+}
+.tab_right{
+	text-align: left;
+}
+.tab_center{
+	text-align: center;
+}
+.tab_text{
+	width: 300px;
+}
+

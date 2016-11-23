@@ -1,0 +1,9 @@
+.show{
+	display: block;
+}
+.hide{
+	display: none;
+}
+textarea{
+	font-size: 12px;
+}
